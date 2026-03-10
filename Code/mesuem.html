@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>GlobeMuseum | The Louvre</title>
+    <style>
+        
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: #f4f4f4;
+            background-color: #f4f4f4;
+            color: #333333;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        
+
+        .nav-link {
+            text-decoration: none;
+            color: #ffffff;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        .article-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            /* 2/3 Content, 1/3 Sidebar */
+            gap: 60px;
+        }
+
+        .article-content {
+            background: #ffffff;
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+        }
+
+        
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            background-color: #ddd;
+            margin-bottom: 30px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .article-body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 1.15rem;
+            color: #222;
+        }
+
+        .article-body p {
+            margin-bottom: 25px;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+        }
+
+        .sidebar-widget {
+            background: #ffffff;
+            padding: 30px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-widget h3 {
+            font-family: 'Georgia', serif;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .author-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-img {
+            width: 60px;
+            height: 60px;
+            background-color: #ccc;
+            border-radius: 50%;
+        }
+
+        .related-list {
+            list-style: none;
+        }
+
+        .related-list li {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .related-list a {
+            text-decoration: none;
+            color: #333333;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .related-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .related-list span {
+            display: block;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 5px;
+        }
+
+
+        @media (max-width: 768px) {
+            .article-container {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .featured-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">GlobeMuseum</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/mesuem.html">Museums</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/dashboard.html">Dashboard</a></li>
+                </ul>
+                <button class="btn btn-outline-light ms-3" onclick="toggleDarkMode()">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="article-container">
+
+        <main class="article-content">
+            
+
+            <h1>The Louvre</h1>
+
+            
+            <img src="https://images.pexels.com/photos/10107419/pexels-photo-10107419.jpeg"
+                alt="Renaissance Painting" class="featured-image">
+
+            <div class="article-body">
+                <p>The Louvre, a former royal palace, is known for its collection of celebrated paintings collected by the French kings, including The Mona Lisa of Leonardo Da Vinci. The museum received 9 million visitors in FY-2025 and is regularly ranked as the most visited art museum not only in France, but in the world. Twenty-seven percent of the visitors in 2012 were French, while 73 percent were from other countries.[6]</p>
+
+                <p>It is located on the Right Bank of the Seine in the city's 1st arrondissement (district) and home to some of the most canonical works of Western art, including the Mona Lisa, Venus de Milo, and Winged Victory. The museum is housed in the Louvre Palace, originally built in the late 12th to 13th century under Philip II. Remnants of the Medieval Louvre fortress are visible in the basement of the museum. Due to urban expansion, the fortress eventually lost its defensive function, and in 1546 Francis I converted it into the primary residence of the French kings.</p>
+
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="sidebar-widget">
+                <h3>About the Author</h3>
+                <div class="author-box">
+                    <div class="author-img"></div> 
+                    <div>
+                        <strong>Dr. Dhoni Kholi</strong>
+                        <p style="font-size: 0.9rem; color: #666;">Senior Researcher</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="sidebar-widget">
+                <h3>Related Articles</h3>
+                <ul class="related-list">
+                    <li>
+                        <a href="#">British Museum</a>
+                        <span>London, UK</span>
+                    </li>
+                    <li>
+                        <a href="#">Metropolitan Museum</a>
+                        <span>New York, USA</span>
+                    </li>
+                </ul>
+            </div>
+            
+        </aside>
+    </div>
+
+</body>
+
+</html>

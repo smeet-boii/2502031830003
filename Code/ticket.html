@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Get Tickets | GlobeMuseum</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .hero h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .containers {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Georgia', serif;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid e0e0e0;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card.popular {
+            border: 2px solid #8c3b3b;
+            transform: scale(1.05);
+            z-index: 2;
+        }
+
+        .card.popular:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+
+        
+
+        .price {
+            font-size: 2.5rem;
+            font-family: 'Georgia', serif;
+            margin: 20px 0;
+            color: #2c2c2c;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #666;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        .features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #8c3b3b;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn-outline {
+            border: 2px solid #2c2c2c;
+            color: #2c2c2c;
+        }
+
+        .btn-outline:hover {
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
+
+        .btn-fill {
+            background-color: #2c2c2c;
+            color: #ffffff;
+        }
+
+        .btn-fill:hover {
+            background-color: #8c3b3b;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card.popular {
+                transform: scale(1);
+            }
+
+            .card.popular:hover {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">GlobeMuseum</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/mesuem.html">Museums</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/dashboard.html">Dashboard</a></li>
+                </ul>
+                🌙
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="hero">
+        <div>
+            <h1>Support Us</h1>
+            <p>Your ticket helps us maintain our digital archives and create new immersive experiences.</p>
+        </div>
+    </div>
+
+    <div class="containers">
+        <h2 class="section-title">Choose Your Pass</h2>
+
+        <div class="pricing-grid">
+
+            <div class="card">
+                <h3>Free Pass</h3>
+                <div class="price">$0</div>
+                <ul class="features">
+                    <li>Access to all public galleries</li>
+                    <li>Standard resolution images</li>
+                    <li>Self-guided audio tour</li>
+                </ul>
+                <a href="/dashboard.html" class="btn btn-outline">Register Free</a>
+            </div>
+
+
+            <div class="card popular">
+                <h3>Standard Pass</h3>
+                <div class="price">$15</div>
+                <ul class="features">
+                    <li>Access to all public galleries</li>
+                    <li>High-resolution images</li>
+                    <li>Self-guided audio tour</li>
+                    <li>Live curator Q&A (Monthly)</li>
+                    <li>10% discount in gift shop</li>
+                </ul>
+                <a href="/dashboard.html" class="btn btn-fill">Buy Standard Pass</a>
+            </div>
+
+            <div class="card">
+                <h3>Patron Pass</h3>
+                <div class="price">$50</div>
+                <ul class="features">
+                    <li>Everything in Standard Pass</li>
+                    <li>Early access to new exhibits</li>
+                    <li>High-res downloads for personal use</li>
+                    <li>Exclusive "Behind the Scenes" video</li>
+                    <li>Supporter certificate (PDF)</li>
+                </ul>
+                <a href="/dashboard.html" class="btn btn-outline">Become a Patron</a>
+            </div>
+        </div>
+
+        
+</body>
+
+</html>

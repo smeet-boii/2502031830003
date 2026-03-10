@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Dashboard | GlobeMuseum</title>
+
+    <style>
+        .mesuem{
+            margin-top: 10vh;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">GlobeMuseum</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/mesuem.html">Museums</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/dashboard.html">Dashboard</a></li>
+                </ul>
+                <button class="btn btn-outline-light ms-3" onclick="toggleDarkMode()">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="museums" class="container mesuem">
+        <h2 class="text-center mb-4">Treading Museums</h2>
+
+        <input type="text" id="searchInput" onkeyup="searchMuseums()" class="form-control mb-4"
+            placeholder="Search museum...">
+
+        <div class="row">
+
+            <!-- Louvre -->
+            <div class="col-md-4 mb-4">
+                <div class="card museum-card fade-in">
+                    <img src="https://images.pexels.com/photos/10107419/pexels-photo-10107419.jpeg"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h5>The Louvre</h5>
+                        <p>Paris, France</p>
+                        <button class="btn btn-success btn-sm" onclick="startTour()">Virtual Tour</button>
+                        <button class="btn btn-warning btn-sm" onclick="addToFavorites('The Louvre')">❤️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- British Museum -->
+            <div class="col-md-4 mb-4">
+                <div class="card museum-card fade-in">
+                    <img src="https://images.pexels.com/photos/12796279/pexels-photo-12796279.jpeg"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h5>British Museum</h5>
+                        <p>London, UK</p>
+                        <button class="btn btn-success btn-sm" onclick="startTour()">Virtual Tour</button>
+                        <button class="btn btn-warning btn-sm" onclick="addToFavorites('British Museum')">❤️</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metropolitan -->
+            <div class="col-md-4 mb-4">
+                <div class="card museum-card fade-in">
+                    <img src="https://images.pexels.com/photos/4285170/pexels-photo-4285170.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5>Metropolitan Museum</h5>
+                        <p>New York, USA</p>
+                        <button class="btn btn-success btn-sm" onclick="startTour()">Virtual Tour</button>
+                        <button class="btn btn-warning btn-sm"
+                            onclick="addToFavorites('Metropolitan Museum')">❤️</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
